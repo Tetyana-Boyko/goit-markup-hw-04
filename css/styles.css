@@ -77,6 +77,8 @@ body {
 /* =========== HEADER STYLES =========== */
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -108,12 +110,16 @@ body {
 .text-studio-header {
   color: #2e2f42;
 }
+.menu-item {
+}
 
 .menu-link {
+  position: relative;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  color: #404bbf;
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -135,6 +141,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
 }
 
 .page-adress {
@@ -222,17 +231,31 @@ body {
   width: calc((100% - 72px) / 4);
 }
 
-.benefits-list-link {
-  display: block;
+.benefits-list-link-container {
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f4f4fd;
-  fill: #2e2f42;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
   width: 264px;
   height: 112px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
   margin-bottom: 8px;
+}
+
+.benefits-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #2e2f42;
+  border: 1px solid #8e8f99;
+  width: 100%;
+  height: 100%;
+}
+
+.benefits-list-icon {
+  width: 64px;
+  height: 64px;
 }
 
 .benefits-list-title {
@@ -263,6 +286,8 @@ body {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .our-team-position {
@@ -289,21 +314,29 @@ body {
   gap: 24px;
 }
 
-.social-list-link {
-  display: block;
-  align-items: center;
-  justify-content: center;
+.social-list-item {
   width: 40px;
   height: 40px;
+}
+
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #4d5ae5;
-  fill: #f4f4fd;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: #404bbf;
+}
+
+.social-list-icon {
+  fill: #f4f4fd;
 }
 
 /* =========== PORTFOLIO STYLES =========== */
@@ -316,6 +349,11 @@ body {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+}
+.social-list-link-footer:hover,
+.social-list-link-footer:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-products {
@@ -352,6 +390,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #f4f4fd;
   background-color: #4d5ae5;
   padding: 40px 32px;
@@ -366,6 +406,12 @@ body {
   max-width: 1440px;
   padding-top: 100px;
   padding-bottom: 100px;
+  display: flex;
+  align-items: baseline;
+}
+
+.page-logo-text-container-footer {
+  margin-right: 120px;
 }
 
 .page-logo-footer {
@@ -408,15 +454,20 @@ body {
 .social-list-footer {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
+}
+
+.social-list-item-footer {
+  width: 40px;
+  height: 40px;
 }
 
 .social-list-link-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #4d5ae5;
   fill: #f4f4fd;
@@ -426,4 +477,9 @@ body {
 .social-list-link-footer:hover,
 .social-list-link-footer:focus {
   background-color: #31d0aa;
+}
+
+.social-list-icon-footer {
+  width: 24px;
+  height: 24px;
 }
